@@ -1,4 +1,14 @@
 {
+  "name": "learning-typescript-track",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@types/node": "^25.9.2",
     "ts-node": "^10.9.2",
