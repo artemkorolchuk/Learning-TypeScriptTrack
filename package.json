@@ -1,7 +1,19 @@
 {
+  "name": "learning-typescript-track",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "yarn@4.9.1",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
   "devDependencies": {
     "@types/node": "^25.9.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^6.0.3"
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
   }
 }
