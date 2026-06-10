@@ -12,6 +12,8 @@
     "types": ["node"],
 
     "lib": ["ESNext"],
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", ".yarn"],
