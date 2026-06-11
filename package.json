@@ -14,11 +14,13 @@
     "test:watch": "turbo run test --watch",
     "typecheck": "turbo run typecheck",
     "lint": "turbo rub lint",
+    "coverage": "turbo run test -- --coverage",
     "format": "biome format --write ."
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.16",
     "@types/node": "^25.9.2",
+    "@vitest/coverage-v8": "^4.1.8",
     "tsx": "^4.22.4",
     "turbo": "^2.9.18",
     "typescript": "^6.0.3",

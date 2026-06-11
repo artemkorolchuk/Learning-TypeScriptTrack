@@ -3,7 +3,7 @@
   "tasks": {
     "test": {
       "cache": true,
-      "outputs": []
+      "outputs": ["coverage/**"]
     },
     "typecheck": {
       "cache": true,
