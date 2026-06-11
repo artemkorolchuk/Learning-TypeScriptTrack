@@ -470,6 +470,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@track/hard@workspace:packages/hard":
+  version: 0.0.0-use.local
+  resolution: "@track/hard@workspace:packages/hard"
+  languageName: unknown
+  linkType: soft
+
+"@track/medium@workspace:packages/medium":
+  version: 0.0.0-use.local
+  resolution: "@track/medium@workspace:packages/medium"
+  languageName: unknown
+  linkType: soft
+
 "@turbo/darwin-64@npm:2.9.18":
   version: 2.9.18
   resolution: "@turbo/darwin-64@npm:2.9.18"
