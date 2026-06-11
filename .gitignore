@@ -1,3 +1,8 @@
-node_modules
+node_modules/
+.turbo/
+
 .yarn
+dist/
+coverage/
+
 .DS_Store

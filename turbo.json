@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "cache": true,
+      "outputs": ["dist/**"]
+    },
+    "test": {
+      "cache": true,
+      "outputs": []
+    },
+    "typecheck": {
+      "cache": true,
+      "outputs": []
+    },
+    "lint": {
+      "cache": true,
+      "outputs": []
+    }
+  }
+}

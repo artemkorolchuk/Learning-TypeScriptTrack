@@ -1,20 +1,8 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-
-    "strict": true,
-    "skipLibCheck": true,
-
-    "noEmit": true,
-
-    "types": ["node"],
-
-    "lib": ["ESNext"],
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", ".yarn"],
+  "files": [],
+  "references": [
+    { "path": "./packages/easy" },
+    { "path": "./packages/medium" },
+    { "path": "./packages/hard" },
+  ],
 }
