@@ -20,14 +20,20 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
+      - name: Prepare Yarn
+        run: corepack prepare yarn@4.9.1 --activate
+
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Typecheck
-        run: yarn turbo run typecheck
+      - name: Format check
+        run: yarn turbo run format
 
       - name: Lint
         run: yarn turbo run lint
+
+      - name: Typecheck
+        run: yarn turbo run typecheck
 
       - name: Test + Coverage
         run: yarn turbo run test

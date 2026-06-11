@@ -12,6 +12,14 @@
     "lint": {
       "cache": true,
       "outputs": []
+    },
+    "lint:fix": {
+      "cache": true,
+      "outputs": []
+    },
+    "format": {
+      "cache": true,
+      "outputs": []
     }
   }
 }

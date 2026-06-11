@@ -1,8 +1,8 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./packages/easy" },
-    { "path": "./packages/medium" },
-    { "path": "./packages/hard" },
-  ],
+	"files": [],
+	"references": [
+		{ "path": "./packages/easy" },
+		{ "path": "./packages/medium" },
+		{ "path": "./packages/hard" }
+	]
 }
