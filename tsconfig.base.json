@@ -3,11 +3,15 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+
     "strict": true,
     "skipLibCheck": true,
+
     "noEmit": true,
+
     "types": ["node"],
     "lib": ["ESNext"],
+
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
   },
