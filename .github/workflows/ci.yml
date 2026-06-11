@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
 
       - name: Enable Corepack
         run: corepack enable
@@ -31,4 +30,4 @@ jobs:
         run: yarn turbo run lint
 
       - name: Test + Coverage
-        run: yarn turbo run test -- --coverage
+        run: yarn turbo run test
