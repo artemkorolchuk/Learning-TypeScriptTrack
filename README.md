@@ -35,7 +35,7 @@ yarn format
 yarn lint:fix
 ```
 
-## Project scripts overview
+# Project scripts overview
 |     Command    |           Description          |
 |:--------------:|:------------------------------:|
 | yarn test      | Run all Vitest tests via Turbo |
