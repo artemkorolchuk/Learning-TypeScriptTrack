@@ -11,10 +11,9 @@
   "packageManager": "yarn@4.9.1",
   "scripts": {
     "test": "turbo run test",
-    "test:watch": "vitest",
+    "test:watch": "turbo run test --watch",
     "typecheck": "turbo run typecheck",
-    "dev": "tsx watch",
-    "lint": "biome check .",
+    "lint": "turbo rub lint",
     "format": "biome format --write ."
   },
   "devDependencies": {
