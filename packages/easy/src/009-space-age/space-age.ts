@@ -13,6 +13,6 @@ export type Planet = keyof typeof PLANETS;
 const SECONDS_IN_EARTH_YEAR = 31_557_600;
 
 export function age(planet: Planet, seconds: number): number {
-  const result = seconds / SECONDS_IN_EARTH_YEAR / PLANETS[planet];
-  return Number(result.toFixed(2));
+	const result = seconds / SECONDS_IN_EARTH_YEAR / PLANETS[planet];
+	return Number(result.toFixed(2));
 }
