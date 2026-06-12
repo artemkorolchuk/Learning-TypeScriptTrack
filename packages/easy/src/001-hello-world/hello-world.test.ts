@@ -1,4 +1,4 @@
-import { describe, expect, it, test } from "vitest";
+import { describe, expect, it } from "vitest";
 import { hello } from "./hello-world.js";
 
 describe("Hello World", () => {
