@@ -30,17 +30,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
-
       - name: Enable Corepack
         run: corepack enable
 
       - name: Prepare Yarn
         run: corepack prepare yarn@${{ env.YARN_VERSION }} --activate
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
 
       - name: Install dependencies
         run: yarn install --immutable

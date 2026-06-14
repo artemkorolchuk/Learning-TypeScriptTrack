@@ -1,21 +1,21 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "tasks": {
-    "test": {
-      "cache": true,
-      "outputs": ["coverage/**"]
-    },
-    "typecheck": {
-      "cache": true,
-      "outputs": []
-    },
-    "lint": {
-      "cache": true,
-      "outputs": []
-    },
-    "lint:fix": {
-      "cache": true,
-      "outputs": []
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"test": {
+			"cache": true,
+			"outputs": ["coverage/**"]
+		},
+		"typecheck": {
+			"cache": true,
+			"outputs": []
+		},
+		"lint": {
+			"cache": true,
+			"outputs": []
+		},
+		"lint:fix": {
+			"cache": true,
+			"outputs": []
+		}
+	}
 }
