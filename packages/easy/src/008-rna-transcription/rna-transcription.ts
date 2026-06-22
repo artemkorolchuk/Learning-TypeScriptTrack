@@ -1,22 +1,11 @@
-export const TRANSCIBED_RULE: Map<string, string> = new Map([
-	["G", "C"],
-	["C", "G"],
-	["T", "A"],
-	["A", "U"],
-]);
+const DNA_TO_RNA = { G: "C", C: "G", T: "A", A: "U" } as const;
 
-export function toRna(inputDnaStrand: string): string {
-	let result = "";
+type DnaBase = keyof typeof DNA_TO_RNA;
 
-	for (const char of inputDnaStrand) {
-		const mapped = TRANSCIBED_RULE.get(char);
-
-		if (mapped === undefined) {
-			throw new Error("Invalid input DNA.");
-		}
-
-		result += mapped;
-	}
-
-	return result;
+export function toRna(strand: string): string {
+  return Array.from(strand, (base) => {
+    const rna = DNA_TO_RNA[base as DnaBase];
+    if (rna === undefined) throw new Error("Invalid input DNA.");
+    return rna;
+  }).join("");
 }
