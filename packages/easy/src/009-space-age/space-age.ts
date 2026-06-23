@@ -1,4 +1,4 @@
-export const PLANETS = {
+export const ORBITAL_PERIODS = {
 	mercury: 0.2408467,
 	venus: 0.61519726,
 	earth: 1,
@@ -9,10 +9,11 @@ export const PLANETS = {
 	neptune: 164.79132,
 } as const;
 
-export type Planet = keyof typeof PLANETS;
+export type Planet = keyof typeof ORBITAL_PERIODS;
 const SECONDS_IN_EARTH_YEAR = 31_557_600;
 
 export function age(planet: Planet, seconds: number): number {
-	const result = seconds / SECONDS_IN_EARTH_YEAR / PLANETS[planet];
-	return Number(result.toFixed(2));
+	const earthYears = seconds / SECONDS_IN_EARTH_YEAR;
+	const planetYears = earthYears / ORBITAL_PERIODS[planet];
+	return Number(planetYears.toFixed(2));
 }
