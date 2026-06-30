@@ -1,21 +1,13 @@
 export function convert(givenNumber: number): string {
-	const result: string[] = [];
+	const RULES = [
+		[3, "Pling"],
+		[5, "Plang"],
+		[7, "Plong"],
+	] as const;
 
-	if (givenNumber % 3 === 0) {
-		result.push("Pling");
-	}
+	const drops = RULES.filter(([factor]) => givenNumber % factor === 0)
+		.map(([, sound]) => sound)
+		.join("");
 
-	if (givenNumber % 5 === 0) {
-		result.push("Plang");
-	}
-
-	if (givenNumber % 7 === 0) {
-		result.push("Plong");
-	}
-
-	if (result.length === 0) {
-		result.push(givenNumber.toString());
-	}
-
-	return result.join("");
+	return drops || String(givenNumber);
 }
