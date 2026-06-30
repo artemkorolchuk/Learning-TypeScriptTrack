@@ -1,11 +1,9 @@
 export class Triangle {
-	private a: number;
-	private b: number;
-	private c: number;
-
-	constructor(...sides: number[]) {
-		[this.a, this.b, this.c] = sides;
-	}
+	constructor(
+		private a: number,
+		private b: number,
+		private c: number,
+	) {}
 
 	get isEquilateral(): boolean {
 		return this.isValid() && this.a === this.b && this.a === this.c;
@@ -18,7 +16,7 @@ export class Triangle {
 		);
 	}
 
-	get isScalene() {
+	get isScalene(): boolean {
 		return (
 			this.isValid() &&
 			this.a !== this.b &&
