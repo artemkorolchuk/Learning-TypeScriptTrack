@@ -20,18 +20,14 @@ const STEP_CODON = 3;
 
 export function translate(rnaString: string): string[] {
 	const result = [];
-
 	for (let i = 0; i < rnaString.length; i += STEP_CODON) {
 		const currentCodon = rnaString.substring(i, i + STEP_CODON);
 		if (STOP_CODONS.includes(currentCodon)) {
 			break;
 		}
-
-		if (TRANSLATED[currentCodon] !== undefined) {
-			result.push(TRANSLATED[currentCodon]);
-		} else {
-			throw new Error("Invalid codon");
-		}
+		const protein = TRANSLATED[currentCodon];
+		if (protein === undefined) throw new Error("Invalid codon");
+		result.push(protein);
 	}
 
 	return result;
