@@ -1,25 +1,12 @@
 export function hey(message: string): string {
-	message = message.trim();
-	const lastChar = message[message.length - 1];
-	if (message === "") {
-		return "Fine. Be that way!";
-	}
+	const text = message.trim();
+	if (text === "") return "Fine. Be that way!";
+	const isShouting = text === text.toUpperCase() && /[a-z]/i.test(text);
+	const isQuestion = text.endsWith("?");
 
-	if (
-		lastChar === "?" &&
-		message === message.toUpperCase() &&
-		/[a-z]/i.test(message)
-	) {
-		return "Calm down, I know what I'm doing!";
-	}
-
-	if (message === message.toUpperCase() && /[a-z]/i.test(message)) {
-		return "Whoa, chill out!";
-	}
-
-	if (lastChar === "?") {
-		return "Sure.";
-	}
+	if (isQuestion && isShouting) return "Calm down, I know what I'm doing!";
+	if (isShouting) return "Whoa, chill out!";
+	if (isQuestion) return "Sure.";
 
 	return "Whatever.";
 }
